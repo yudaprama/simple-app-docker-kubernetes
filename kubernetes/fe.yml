@@ -17,7 +17,7 @@ spec:
       containers:
         - name: api
           imagePullPolicy: Always
-          image: benstraub/fe:latest
+          image: yuda/fe:latest
           ports:
             - containerPort: 8000
               protocol: TCP

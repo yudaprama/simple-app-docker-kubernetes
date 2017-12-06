@@ -20,7 +20,7 @@ router:
         - mailer
 
 api:
-    image: benstraub/api:latest
+    image: yuda/api:latest
     command: --reload
     volumes:
         - ./api:/app
@@ -29,11 +29,11 @@ api:
         - mailer
 
 fe:
-    image: benstraub/fe:latest
+    image: yuda/fe:latest
     command: -c /etc/nginx/nginx-dev.conf
 
 mailer:
-    image: benstraub/mailer:latest
+    image: yuda/mailer:latest
     volumes:
         - ./mailer:/app
     ports:
@@ -43,7 +43,7 @@ mailer:
         - redis
 
 mailerworker:
-    image: benstraub/mailer:latest
+    image: yuda/mailer:latest
     command: bin/rake resque:work
     volumes:
         - ./mailer:/app

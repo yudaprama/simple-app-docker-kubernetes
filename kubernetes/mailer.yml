@@ -17,7 +17,7 @@ spec:
       containers:
         - name: mailer
           imagePullPolicy: Always
-          image: benstraub/mailer:latest
+          image: yuda/mailer:latest
           ports:
             - containerPort: 3000
               protocol: TCP
@@ -60,5 +60,5 @@ spec:
       containers:
         - name: mailerworker
           imagePullPolicy: Always
-          image: benstraub/mailer:latest
+          image: yuda/mailer:latest
           command: ["rake", "resque:work"]
